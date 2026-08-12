@@ -123,20 +123,25 @@
        PORTADA
     ========================= */
 
-    .hero {
-      padding: 115px 0 105px;
-      text-align: center;
-      background:
-        linear-gradient(
-          rgba(248, 244, 236, 0.88),
-          rgba(248, 244, 236, 0.97)
-        ),
-        radial-gradient(
-          circle at top,
-          #e9dcc7,
-          transparent 65%
-        );
-    }
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(248, 244, 236, 0.78),
+      rgba(248, 244, 236, 0.90)
+    ),
+    url("images/hero-literatura.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
     .eyebrow {
       margin-bottom: 18px;
