@@ -110,6 +110,15 @@
       white-space: nowrap;
     }
 
+    .languages a {
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .languages a:hover {
+      color: var(--accent);
+    }
+
     /* =========================
        PORTADA
     ========================= */
@@ -412,8 +421,6 @@
       font-weight: normal;
     }
 
-    /* PRECIO MÁS PEQUEÑO */
-
     .price {
       margin: 8px 0 20px;
       color: var(--accent);
@@ -595,7 +602,9 @@
         </nav>
 
         <div class="languages">
-          🇫🇷 Français &nbsp;|&nbsp; 🇬🇧 English
+          <a href="./fr/">🇫🇷 Français</a>
+          &nbsp;|&nbsp;
+          <a href="./en/">🇬🇧 English</a>
         </div>
 
       </div>
@@ -735,9 +744,6 @@
           Programa
         </h2>
 
-
-        <!-- OBRA DESTACADA -->
-
         <div class="featured-work">
 
           <span class="featured-label">
@@ -751,13 +757,7 @@
 
         </div>
 
-
-        <!-- LISTA DE SESIONES -->
-
         <div class="schedule-list">
-
-
-          <!-- 16 SEPTIEMBRE -->
 
           <div class="session">
 
@@ -779,9 +779,6 @@
 
           </div>
 
-
-          <!-- 23 SEPTIEMBRE -->
-
           <div class="session">
 
             <div class="date">
@@ -801,9 +798,6 @@
             </div>
 
           </div>
-
-
-          <!-- 30 SEPTIEMBRE -->
 
           <div class="session">
 
@@ -825,9 +819,6 @@
 
           </div>
 
-
-          <!-- 7 OCTUBRE -->
-
           <div class="session">
 
             <div class="date">
@@ -847,9 +838,6 @@
             </div>
 
           </div>
-
-
-          <!-- 14 OCTUBRE -->
 
           <div class="session">
 
@@ -871,9 +859,6 @@
 
           </div>
 
-
-          <!-- 21 OCTUBRE -->
-
           <div class="session">
 
             <div class="date">
@@ -883,19 +868,20 @@
             <div class="works">
 
               <div class="work">
+
                 Mal de manos
+
               </div>
 
               <div class="work">
+
                 El sillón de la señora Michalski
+
               </div>
 
             </div>
 
           </div>
-
-
-          <!-- 28 OCTUBRE -->
 
           <div class="session">
 
@@ -918,7 +904,6 @@
           </div>
 
         </div>
-
 
         <div class="schedule-time">
           <strong>Horario:</strong>
@@ -1008,14 +993,11 @@
           según tus intereses y disponibilidad.
         </p>
 
-
         <div class="registration-box">
 
           <h3>
             Precio por sesión
           </h3>
-
-          <!-- €10 PEQUEÑO -->
 
           <div class="price">
             €10
