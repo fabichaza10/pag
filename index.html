@@ -1,286 +1,1118 @@
-<!DOCTYPE html><html lang="es"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lecturas Hispánicas | Lecturas guiadas de literatura hispánica contemporánea</title>
-  <meta    name="description"    content="Lecturas guiadas de literatura hispánica contemporánea, con análisis literario y conversación en español."  >
-  <style>    :root {      --cream: #f8f4ec;      --paper: #fffdf8;      --ink: #292521;      --muted: #6e675f;      --accent: #8b2635;      --accent-dark: #681c29;      --gold: #b38a4b;      --border: #e3dacd;      --white: #ffffff;      --shadow: 0 12px 35px rgba(40, 35, 30, 0.08);    }
-    * {      box-sizing: border-box;      margin: 0;      padding: 0;    }
-    html {      scroll-behavior: smooth;    }
-    body {      font-family: Georgia, "Times New Roman", serif;      background: var(--cream);      color: var(--ink);      line-height: 1.7;    }
-    a {      color: inherit;      text-decoration: none;    }
-    .container {      width: min(1100px, 92%);      margin: 0 auto;    }
-    /* =========================       ENCABEZADO    ========================= */
-    header {      position: sticky;      top: 0;      z-index: 1000;      background: rgba(255, 253, 248, 0.97);      border-bottom: 1px solid var(--border);      backdrop-filter: blur(10px);    }
-    .nav {      min-height: 78px;      display: flex;      align-items: center;      justify-content: space-between;      gap: 30px;    }
-    .logo {      color: var(--accent);      font-size: 1.25rem;      font-weight: bold;      white-space: nowrap;    }
-    .nav-right {      display: flex;      align-items: center;      gap: 28px;    }
-    .nav-links {      display: flex;      align-items: center;      gap: 25px;      list-style: none;      font-family: Arial, sans-serif;      font-size: 0.88rem;    }
-    .nav-links a {      transition: color 0.2s ease;    }
-    .nav-links a:hover {      color: var(--accent);    }
-    .languages {      color: var(--muted);      font-family: Arial, sans-serif;      font-size: 0.8rem;      white-space: nowrap;    }
-    /* =========================       PORTADA    ========================= */
-    .hero {      padding: 115px 0 105px;      text-align: center;      background:        linear-gradient(          rgba(248, 244, 236, 0.88),          rgba(248, 244, 236, 0.97)        ),        radial-gradient(          circle at top,          #e9dcc7,          transparent 65%        );    }
-    .eyebrow {      margin-bottom: 18px;      color: var(--gold);      font-family: Arial, sans-serif;      font-size: 0.75rem;      font-weight: bold;      letter-spacing: 0.18em;      text-transform: uppercase;    }
-    .hero h1 {      margin-bottom: 18px;      color: var(--accent);      font-size: clamp(2.8rem, 7vw, 5.4rem);      font-weight: normal;      line-height: 1.05;    }
-    .hero h2 {      margin-bottom: 25px;      color: var(--ink);      font-size: clamp(1.15rem, 2vw, 1.55rem);      font-weight: normal;    }
-    .hero-description {      max-width: 720px;      margin: 0 auto;      color: var(--muted);      font-size: 1.1rem;    }
-    .hero-buttons {      display: flex;      justify-content: center;      flex-wrap: wrap;      gap: 15px;      margin-top: 35px;    }
-    .button {      display: inline-block;      padding: 13px 26px;      border-radius: 4px;      font-family: Arial, sans-serif;      font-size: 0.88rem;      font-weight: bold;      transition: all 0.2s ease;    }
-    .button-primary {      background: var(--accent);      color: var(--white);    }
-    .button-primary:hover {      background: var(--accent-dark);      transform: translateY(-1px);    }
-    .button-secondary {      border: 1px solid var(--accent);      color: var(--accent);      background: transparent;    }
-    .button-secondary:hover {      background: var(--accent);      color: var(--white);    }
-    /* =========================       SECCIONES GENERALES    ========================= */
-    section {      padding: 90px 0;    }
-    section:nth-of-type(even) {      background: var(--paper);    }
-    .section-title {      margin-bottom: 18px;      color: var(--accent);      text-align: center;      font-size: 2.5rem;      font-weight: normal;      line-height: 1.2;    }
-    .section-intro {      max-width: 780px;      margin: 0 auto 45px;      color: var(--muted);      text-align: center;      font-size: 1.05rem;    }
-    .small-title {      margin-bottom: 10px;      color: var(--gold);      font-family: Arial, sans-serif;      font-size: 0.73rem;      font-weight: bold;      letter-spacing: 0.15em;      text-align: center;      text-transform: uppercase;    }
-    /* =========================       LECTURAS GUIADAS    ========================= */
-    .session-includes {      max-width: 760px;      margin: 0 auto;      padding: 30px 35px;      border-top: 1px solid var(--border);      border-bottom: 1px solid var(--border);    }
-    .session-includes h3 {      margin-bottom: 18px;      color: var(--accent);      font-size: 1.2rem;      font-weight: normal;    }
-    .session-includes ul {      padding-left: 22px;      color: var(--muted);    }
-    .session-includes li {      margin-bottom: 8px;    }
-    .final-note {      margin-top: 35px;      margin-bottom: 0;    }
-    /* =========================       PROGRAMA    ========================= */
-    .schedule {      background: var(--cream);    }
-    .featured-work {      max-width: 800px;      margin: 40px auto 50px;      padding: 38px 30px;      background: var(--paper);      border: 1px solid var(--border);      box-shadow: var(--shadow);      text-align: center;    }
-    .featured-label {      display: block;      margin-bottom: 12px;      color: var(--gold);      font-family: Arial, sans-serif;      font-size: 0.73rem;      font-weight: bold;      letter-spacing: 0.16em;      text-transform: uppercase;    }
-    .featured-work h3 {      color: var(--accent);      font-size: 1.55rem;      font-weight: normal;    }
-    .featured-work h3 span {      color: var(--muted);      font-size: 1rem;      font-style: normal;    }
-    .schedule-list {      max-width: 850px;      margin: 0 auto;    }
-    .session {      display: grid;      grid-template-columns: 150px 1fr;      gap: 30px;      padding: 25px 0;      border-bottom: 1px solid var(--border);    }
-    .session:first-child {      border-top: 1px solid var(--border);    }
-    .date {      color: var(--accent);      font-family: Arial, sans-serif;      font-size: 0.93rem;      font-weight: bold;    }
-    .works {      display: grid;      grid-template-columns: 1fr 1fr;      gap: 8px 25px;    }
-    .work {      font-size: 1.08rem;    }
-    .schedule-time {      margin-top: 38px;      color: var(--ink);      font-family: Arial, sans-serif;      font-size: 0.93rem;      text-align: center;    }
-    .schedule-note {      max-width: 700px;      margin: 8px auto 0;      color: var(--muted);      font-family: Arial, sans-serif;      font-size: 0.84rem;      text-align: center;    }
-    /* =========================       SOBRE EL PROYECTO    ========================= */
-    .about-grid {      display: grid;      grid-template-columns: 0.8fr 1.5fr;      gap: 70px;      align-items: center;    }
-    .about-heading {      color: var(--accent);      font-size: 2.7rem;      font-weight: normal;    }
-    .about-text p {      margin-bottom: 20px;      color: var(--muted);      font-size: 1.05rem;    }
-    /* =========================       INSCRIPCIÓN    ========================= */
-    .registration {      background: var(--paper);    }
-    .registration-box {      max-width: 700px;      margin: 40px auto 0;      padding: 50px;      background: var(--cream);      border: 1px solid var(--border);      box-shadow: var(--shadow);      text-align: center;    }
-    .registration-box h3 {      color: var(--ink);      font-size: 1.25rem;      font-weight: normal;    }
-    /* PRECIO MÁS PEQUEÑO */
-    .price {      margin: 8px 0 20px;      color: var(--accent);      font-size: 1.8rem;      font-weight: normal;    }
-    .registration-box p {      color: var(--muted);    }
-    .registration-email {      display: inline-block;      margin: 8px 0 25px;      color: var(--accent);      font-family: Arial, sans-serif;      font-weight: bold;      word-break: break-word;    }
-    .registration-note {      max-width: 550px;      margin: 0 auto 28px;      font-size: 0.95rem;    }
-    /* =========================       CONTACTO    ========================= */
-    .contact {      text-align: center;    }
-    .contact-email {      display: inline-block;      margin-top: 15px;      color: var(--accent);      font-size: 1.25rem;    }
-    /* =========================       PIE DE PÁGINA    ========================= */
-    footer {      padding: 45px 0;      background: var(--accent);      color: rgba(255, 255, 255, 0.9);      text-align: center;    }
-    footer h3 {      margin-bottom: 8px;      font-size: 1.4rem;      font-weight: normal;    }
-    footer p {      margin: 5px 0;      font-family: Arial, sans-serif;      font-size: 0.84rem;      opacity: 0.88;    }
-    /* =========================       VERSIÓN MÓVIL    ========================= */
-    @media (max-width: 800px) {
-      .nav {        flex-direction: column;        justify-content: center;        padding: 18px 0;      }
-      .nav-right {        flex-direction: column;        gap: 12px;      }
-      .nav-links {        justify-content: center;        flex-wrap: wrap;        gap: 15px;      }
-      .about-grid {        grid-template-columns: 1fr;        gap: 30px;      }
-      .about-heading {        text-align: center;      }    }
-    @media (max-width: 600px) {
-      .hero {        padding: 75px 0 70px;      }
-      section {        padding: 65px 0;      }
-      .section-title {        font-size: 2rem;      }
-      .session-includes {        padding: 25px 20px;      }
-      .featured-work {        padding: 30px 20px;      }
-      .session {        grid-template-columns: 1fr;        gap: 8px;      }
-      .works {        grid-template-columns: 1fr;        gap: 5px;      }
-      .registration-box {        padding: 35px 22px;      }
-      .languages {        white-space: normal;        text-align: center;      }    }  </style></head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lecturas Hispánicas | Lecturas guiadas de literatura hispánica contemporánea</title>
+
+  <meta
+    name="description"
+    content="Lecturas guiadas de literatura hispánica contemporánea, con análisis literario y conversación en español."
+  >
+
+  <style>
+    :root {
+      --cream: #f8f4ec;
+      --paper: #fffdf8;
+      --ink: #292521;
+      --muted: #6e675f;
+      --accent: #8b2635;
+      --accent-dark: #681c29;
+      --gold: #b38a4b;
+      --border: #e3dacd;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(40, 35, 30, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    /* =========================
+       ENCABEZADO
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 253, 248, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      color: var(--accent);
+      font-size: 1.25rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .languages {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       PORTADA
+    ========================= */
+
+    .hero {
+      padding: 115px 0 105px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(248, 244, 236, 0.88),
+          rgba(248, 244, 236, 0.97)
+        ),
+        radial-gradient(
+          circle at top,
+          #e9dcc7,
+          transparent 65%
+        );
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      font-weight: normal;
+      line-height: 1.05;
+    }
+
+    .hero h2 {
+      margin-bottom: 25px;
+      color: var(--ink);
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-weight: normal;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    /* =========================
+       SECCIONES GENERALES
+    ========================= */
+
+    section {
+      padding: 90px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--paper);
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      color: var(--accent);
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin: 0 auto 45px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .small-title {
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 0.73rem;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       LECTURAS GUIADAS
+    ========================= */
+
+    .session-includes {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 30px 35px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .session-includes h3 {
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+    .session-includes ul {
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .session-includes li {
+      margin-bottom: 8px;
+    }
+
+    .final-note {
+      margin-top: 35px;
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       PROGRAMA
+    ========================= */
+
+    .schedule {
+      background: var(--cream);
+    }
+
+    .featured-work {
+      max-width: 800px;
+      margin: 40px auto 50px;
+      padding: 38px 30px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .featured-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 0.73rem;
+      font-weight: bold;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .featured-work h3 {
+      color: var(--accent);
+      font-size: 1.55rem;
+      font-weight: normal;
+    }
+
+    .featured-work h3 span {
+      color: var(--muted);
+      font-size: 1rem;
+      font-style: normal;
+    }
+
+    .schedule-list {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .session {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 30px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .session:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .date {
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 0.93rem;
+      font-weight: bold;
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 25px;
+    }
+
+    .work {
+      font-size: 1.08rem;
+    }
+
+    .schedule-time {
+      margin-top: 38px;
+      color: var(--ink);
+      font-family: Arial, sans-serif;
+      font-size: 0.93rem;
+      text-align: center;
+    }
+
+    .schedule-note {
+      max-width: 700px;
+      margin: 8px auto 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    /* =========================
+       SOBRE EL PROYECTO
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.5fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-heading {
+      color: var(--accent);
+      font-size: 2.7rem;
+      font-weight: normal;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* =========================
+       INSCRIPCIÓN
+    ========================= */
+
+    .registration {
+      background: var(--paper);
+    }
+
+    .registration-box {
+      max-width: 700px;
+      margin: 40px auto 0;
+      padding: 50px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .registration-box h3 {
+      color: var(--ink);
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+
+    /* PRECIO MÁS PEQUEÑO */
+
+    .price {
+      margin: 8px 0 20px;
+      color: var(--accent);
+      font-size: 1.8rem;
+      font-weight: normal;
+    }
+
+    .registration-box p {
+      color: var(--muted);
+    }
+
+    .registration-email {
+      display: inline-block;
+      margin: 8px 0 25px;
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      word-break: break-word;
+    }
+
+    .registration-note {
+      max-width: 550px;
+      margin: 0 auto 28px;
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--accent);
+      font-size: 1.25rem;
+    }
+
+    /* =========================
+       PIE DE PÁGINA
+    ========================= */
+
+    footer {
+      padding: 45px 0;
+      background: var(--accent);
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-family: Arial, sans-serif;
+      font-size: 0.84rem;
+      opacity: 0.88;
+    }
+
+    /* =========================
+       VERSIÓN MÓVIL
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+      }
+
+      .nav-right {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-heading {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 75px 0 70px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .session-includes {
+        padding: 25px 20px;
+      }
+
+      .featured-work {
+        padding: 30px 20px;
+      }
+
+      .session {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .works {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .registration-box {
+        padding: 35px 22px;
+      }
+
+      .languages {
+        white-space: normal;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
 <body>
-  <!-- =========================       ENCABEZADO  ========================= -->
-  <header>
-    <div class="container nav">
-      <a href="#top" class="logo">        Lecturas Hispánicas      </a>
-      <div class="nav-right">
-        <nav>          <ul class="nav-links">
-            <li>              <a href="#readings">Lecturas</a>            </li>
-            <li>              <a href="#schedule">Programa</a>            </li>
-            <li>              <a href="#about">Sobre mí</a>            </li>
-            <li>              <a href="#registration">Inscripción</a>            </li>
-          </ul>        </nav>
-        <div class="languages">          Français &nbsp;|&nbsp; English        </div>
-      </div>
-    </div>
-  </header>
 
-  <main id="top">
+  <!-- =========================
+       ENCABEZADO
+  ========================= -->
 
-    <!-- =========================         PORTADA    ========================= -->
-    <section class="hero">
-      <div class="container">
-        <div class="eyebrow">          Literatura hispánica contemporánea        </div>
-        <h1>          Lecturas Hispánicas        </h1>
-        <h2>          Lecturas guiadas de literatura hispánica contemporánea        </h2>
-        <p class="hero-description">          Una invitación a explorar la literatura hispánica          contemporánea, profundizar en la lectura de obras literarias          y compartir tu propia perspectiva en un espacio acogedor          de lectura y conversación en español.        </p>
-        <div class="hero-buttons">
-          <a            href="#schedule"            class="button button-primary"          >            Ver el programa          </a>
-          <a            href="#registration"            class="button button-secondary"          >            Inscribirse          </a>
-        </div>
-      </div>
-    </section>
+  <header>
 
-    <!-- =========================         LECTURAS GUIADAS    ========================= -->
-    <section class="readings" id="readings">
-      <div class="container">
-        <div class="small-title">          Las sesiones        </div>
-        <h2 class="section-title">          Lecturas guiadas        </h2>
-        <p class="section-intro">          Cada sesión ofrece una lectura guiada de obras de literatura          hispánica contemporánea. Las sesiones combinan la lectura          en voz alta de fragmentos seleccionados, el análisis literario          y la conversación en español.        </p>
-        <div class="session-includes">
-          <h3>            Cada sesión incluye:          </h3>
-          <ul>
-            <li>              Lectura de los textos seleccionados.            </li>
-            <li>              Lectura en voz alta de fragmentos seleccionados.            </li>
-            <li>              Análisis literario.            </li>
-            <li>              Conversación en español.            </li>
-          </ul>
-        </div>
-        <p class="section-intro final-note">          Puedes participar en una sola sesión o en varias,          según tus intereses y disponibilidad.        </p>
-      </div>
-    </section>
+    <div class="container nav">
 
-    <!-- =========================         PROGRAMA    ========================= -->
-    <section class="schedule" id="schedule">
-      <div class="container">
-        <div class="small-title">          Otoño 2026        </div>
-        <h2 class="section-title">          Programa        </h2>
+      <a href="#top" class="logo">
+        Lecturas Hispánicas
+      </a>
 
-        <!-- OBRA DESTACADA -->
-        <div class="featured-work">
-          <span class="featured-label">            Obra destacada          </span>
-          <h3>            <em>Hombre caído</em>            <span>— Fernando Aramburu</span>          </h3>
-        </div>
+      <div class="nav-right">
 
-        <!-- LISTA DE SESIONES -->
-        <div class="schedule-list">
+        <nav>
+          <ul class="nav-links">
 
-          <!-- 16 SEPTIEMBRE -->
-          <div class="session">
-            <div class="date">              16 de septiembre            </div>
-            <div class="works">
-              <div class="work">                Fotos de ardillas              </div>
-              <div class="work">                La tercera mano              </div>
-            </div>
-          </div>
+            <li>
+              <a href="#readings">Lecturas</a>
+            </li>
 
-          <!-- 23 SEPTIEMBRE -->
-          <div class="session">
-            <div class="date">              23 de septiembre            </div>
-            <div class="works">
-              <div class="work">                Dilema              </div>
-              <div class="work">                Combate              </div>
-            </div>
-          </div>
+            <li>
+              <a href="#schedule">Programa</a>
+            </li>
 
-          <!-- 30 SEPTIEMBRE -->
-          <div class="session">
-            <div class="date">              30 de septiembre            </div>
-            <div class="works">
-              <div class="work">                Culo subido              </div>
-              <div class="work">                Última noche de pobres              </div>
-            </div>
-          </div>
+            <li>
+              <a href="#about">Sobre mí</a>
+            </li>
 
-          <!-- 7 OCTUBRE -->
-          <div class="session">
-            <div class="date">              7 de octubre            </div>
-            <div class="works">
-              <div class="work">                El suicidio de Richi              </div>
-              <div class="work">                Bruno Pardal              </div>
-            </div>
-          </div>
+            <li>
+              <a href="#registration">Inscripción</a>
+            </li>
 
-          <!-- 14 OCTUBRE -->
-          <div class="session">
-            <div class="date">              14 de octubre            </div>
-            <div class="works">
-              <div class="work">                Klaus              </div>
-              <div class="work">                Fatalidad              </div>
-            </div>
-          </div>
+          </ul>
+        </nav>
 
-          <!-- 21 OCTUBRE -->
-          <div class="session">
-            <div class="date">              21 de octubre            </div>
-            <div class="works">
-              <div class="work">                Mal de manos              </div>
-              <div class="work">                El sillón de la señora Michalski              </div>
-            </div>
-          </div>
+        <div class="languages">
+          🇫🇷 Français &nbsp;|&nbsp; 🇬🇧 English
+        </div>
 
-          <!-- 28 OCTUBRE -->
-          <div class="session">
-            <div class="date">              28 de octubre            </div>
-            <div class="works">
-              <div class="work">                Cosas de niños              </div>
-              <div class="work">                Hombre caído              </div>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <div class="schedule-time">          <strong>Horario:</strong>          19:00–20:30 (hora de Francia)        </div>
-        <p class="schedule-note">          Se podrán ofrecer horarios adicionales según los países          y las zonas horarias de los participantes.        </p>
-      </div>
-    </section>
+    </div>
 
-    <!-- =========================         SOBRE MÍ    ========================= -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div>
-            <div class="small-title">              El proyecto            </div>
-            <h2 class="about-heading">              Sobre mí            </h2>
-          </div>
-          <div class="about-text">
-            <p>              Soy docente de literatura y lenguas y tengo un              Máster en Lingüística Aplicada.            </p>
-            <p>              Nací en Argentina y he enseñado en Nueva Zelanda,              Estados Unidos, Inglaterra y ahora en Francia.            </p>
-            <p>              A través de Lecturas Hispánicas, ofrezco un espacio              para la lectura, el análisis literario y la conversación              en español, donde los participantes pueden descubrir              la literatura hispánica contemporánea, profundizar en              su comprensión de los textos literarios y compartir              sus propias perspectivas.            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  </header>
 
-    <!-- =========================         INSCRIPCIÓN    ========================= -->
-    <section class="registration" id="registration">
-      <div class="container">
-        <div class="small-title">          Participa en una sesión        </div>
-        <h2 class="section-title">          Inscripción        </h2>
-        <p class="section-intro">          Puedes participar en una sesión o en varias,          según tus intereses y disponibilidad.        </p>
 
-        <div class="registration-box">
-          <h3>            Precio por sesión          </h3>
-          <!-- €10 PEQUEÑO -->
-          <div class="price">            €10          </div>
-          <p>            El pago se realiza mediante PayPal:          </p>
-          <a            href="mailto:alex.caloni@gmail.com"            class="registration-email"          >            alex.caloni@gmail.com          </a>
-          <p class="registration-note">            Una vez confirmada tu inscripción, recibirás            automáticamente por correo electrónico el enlace            de Zoom correspondiente a la sesión seleccionada.          </p>
-          <a            href="mailto:alex.caloni@gmail.com?subject=Inscripción%20Lecturas%20Hisp%C3%A1nicas"            class="button button-primary"          >            Inscribirse por correo electrónico          </a>
-        </div>
-      </div>
-    </section>
+  <main id="top">
 
-    <!-- =========================         CONTACTO    ========================= -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="small-title">          Ponte en contacto        </div>
-        <h2 class="section-title">          Contacto        </h2>
-        <p>          Correo electrónico:        </p>
-        <a          href="mailto:alex.caloni@gmail.com"          class="contact-email"        >          alex.caloni@gmail.com        </a>
-      </div>
-    </section>
-  </main>
 
-  <!-- =========================       PIE DE PÁGINA  ========================= -->
-  <footer>
-    <div class="container">
-      <h3>        Lecturas Hispánicas      </h3>
-      <p>        Lecturas guiadas de literatura hispánica contemporánea      </p>
-      <p>        Online por Zoom • Con base en Francia • Abierto a participantes de todo el mundo      </p>
-      <p style="margin-top: 20px;">        © 2026 Lecturas Hispánicas      </p>
-    </div>
-  </footer>
-</body></html>
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Literatura hispánica contemporánea
+        </div>
+
+        <h1>
+          Lecturas Hispánicas
+        </h1>
+
+        <h2>
+          Lecturas guiadas de literatura hispánica contemporánea
+        </h2>
+
+        <p class="hero-description">
+          Una invitación a explorar la literatura hispánica
+          contemporánea, profundizar en la lectura de obras literarias
+          y compartir tu propia perspectiva en un espacio acogedor
+          de lectura y conversación en español.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#schedule"
+            class="button button-primary"
+          >
+            Ver el programa
+          </a>
+
+          <a
+            href="#registration"
+            class="button button-secondary"
+          >
+            Inscribirse
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LECTURAS GUIADAS
+    ========================= -->
+
+    <section class="readings" id="readings">
+
+      <div class="container">
+
+        <div class="small-title">
+          Las sesiones
+        </div>
+
+        <h2 class="section-title">
+          Lecturas guiadas
+        </h2>
+
+        <p class="section-intro">
+          Cada sesión ofrece una lectura guiada de obras de literatura
+          hispánica contemporánea. Las sesiones combinan la lectura
+          en voz alta de fragmentos seleccionados, el análisis literario
+          y la conversación en español.
+        </p>
+
+        <div class="session-includes">
+
+          <h3>
+            Cada sesión incluye:
+          </h3>
+
+          <ul>
+
+            <li>
+              Lectura de los textos seleccionados.
+            </li>
+
+            <li>
+              Lectura en voz alta de fragmentos seleccionados.
+            </li>
+
+            <li>
+              Análisis literario.
+            </li>
+
+            <li>
+              Conversación en español.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <p class="section-intro final-note">
+          Puedes participar en una sola sesión o en varias,
+          según tus intereses y disponibilidad.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROGRAMA
+    ========================= -->
+
+    <section class="schedule" id="schedule">
+
+      <div class="container">
+
+        <div class="small-title">
+          Otoño 2026
+        </div>
+
+        <h2 class="section-title">
+          Programa
+        </h2>
+
+
+        <!-- OBRA DESTACADA -->
+
+        <div class="featured-work">
+
+          <span class="featured-label">
+            Obra destacada
+          </span>
+
+          <h3>
+            <em>Hombre caído</em>
+            <span>— Fernando Aramburu</span>
+          </h3>
+
+        </div>
+
+
+        <!-- LISTA DE SESIONES -->
+
+        <div class="schedule-list">
+
+
+          <!-- 16 SEPTIEMBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              16 de septiembre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                Fotos de ardillas
+              </div>
+
+              <div class="work">
+                La tercera mano
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 23 SEPTIEMBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              23 de septiembre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                Dilema
+              </div>
+
+              <div class="work">
+                Combate
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 30 SEPTIEMBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              30 de septiembre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                Culo subido
+              </div>
+
+              <div class="work">
+                Última noche de pobres
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 7 OCTUBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              7 de octubre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                El suicidio de Richi
+              </div>
+
+              <div class="work">
+                Bruno Pardal
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 14 OCTUBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              14 de octubre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                Klaus
+              </div>
+
+              <div class="work">
+                Fatalidad
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 21 OCTUBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              21 de octubre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                Mal de manos
+              </div>
+
+              <div class="work">
+                El sillón de la señora Michalski
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 28 OCTUBRE -->
+
+          <div class="session">
+
+            <div class="date">
+              28 de octubre
+            </div>
+
+            <div class="works">
+
+              <div class="work">
+                Cosas de niños
+              </div>
+
+              <div class="work">
+                Hombre caído
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="schedule-time">
+          <strong>Horario:</strong>
+          19:00–20:30 (hora de Francia)
+        </div>
+
+        <p class="schedule-note">
+          Se podrán ofrecer horarios adicionales según los países
+          y las zonas horarias de los participantes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE MÍ
+    ========================= -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div>
+
+            <div class="small-title">
+              El proyecto
+            </div>
+
+            <h2 class="about-heading">
+              Sobre mí
+            </h2>
+
+          </div>
+
+          <div class="about-text">
+
+            <p>
+              Soy docente de literatura y lenguas y tengo un
+              Máster en Lingüística Aplicada.
+            </p>
+
+            <p>
+              Nací en Argentina y he enseñado en Nueva Zelanda,
+              Estados Unidos, Inglaterra y ahora en Francia.
+            </p>
+
+            <p>
+              A través de Lecturas Hispánicas, ofrezco un espacio
+              para la lectura, el análisis literario y la conversación
+              en español, donde los participantes pueden descubrir
+              la literatura hispánica contemporánea, profundizar en
+              su comprensión de los textos literarios y compartir
+              sus propias perspectivas.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INSCRIPCIÓN
+    ========================= -->
+
+    <section class="registration" id="registration">
+
+      <div class="container">
+
+        <div class="small-title">
+          Participa en una sesión
+        </div>
+
+        <h2 class="section-title">
+          Inscripción
+        </h2>
+
+        <p class="section-intro">
+          Puedes participar en una sesión o en varias,
+          según tus intereses y disponibilidad.
+        </p>
+
+
+        <div class="registration-box">
+
+          <h3>
+            Precio por sesión
+          </h3>
+
+          <!-- €10 PEQUEÑO -->
+
+          <div class="price">
+            €10
+          </div>
+
+          <p>
+            El pago se realiza mediante PayPal:
+          </p>
+
+          <a
+            href="mailto:alex.caloni@gmail.com"
+            class="registration-email"
+          >
+            alex.caloni@gmail.com
+          </a>
+
+          <p class="registration-note">
+            Una vez confirmada tu inscripción, recibirás
+            automáticamente por correo electrónico el enlace
+            de Zoom correspondiente a la sesión seleccionada.
+          </p>
+
+          <a
+            href="mailto:alex.caloni@gmail.com?subject=Inscripción%20Lecturas%20Hisp%C3%A1nicas"
+            class="button button-primary"
+          >
+            Inscribirse por correo electrónico
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="small-title">
+          Ponte en contacto
+        </div>
+
+        <h2 class="section-title">
+          Contacto
+        </h2>
+
+        <p>
+          Correo electrónico:
+        </p>
+
+        <a
+          href="mailto:alex.caloni@gmail.com"
+          class="contact-email"
+        >
+          alex.caloni@gmail.com
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       PIE DE PÁGINA
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <h3>
+        Lecturas Hispánicas
+      </h3>
+
+      <p>
+        Lecturas guiadas de literatura hispánica contemporánea
+      </p>
+
+      <p>
+        Online por Zoom • Con base en Francia • Abierto a participantes de todo el mundo
+      </p>
+
+      <p style="margin-top: 20px;">
+        © 2026 Lecturas Hispánicas
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
