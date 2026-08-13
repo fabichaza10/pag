@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Lectures guidées de littérature hispanique contemporaine, avec analyse littéraire et conversation en espagnol."
+    content="Lectures guidées de littérature hispanique contemporaine, avec analyse littéraire et discussion en espagnol."
   >
 
   <style>
@@ -53,7 +53,7 @@
     }
 
     /* =========================
-       EN-TÊTE
+       HEADER
     ========================= */
 
     header {
@@ -110,38 +110,24 @@
       white-space: nowrap;
     }
 
-    .languages a {
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .languages a:hover {
-      color: var(--accent);
-    }
-
     /* =========================
-       PORTADA
+       HERO
     ========================= */
 
     .hero {
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  background:
-    linear-gradient(
-      rgba(248, 244, 236, 0.78),
-      rgba(248, 244, 236, 0.90)
-    ),
-    url("../images/WhatsApp Image 2026-08-12 at 19.23.01 (1).jpeg");
-    
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+      padding: 115px 0 105px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(248, 244, 236, 0.88),
+          rgba(248, 244, 236, 0.97)
+        ),
+        radial-gradient(
+          circle at top,
+          #e9dcc7,
+          transparent 65%
+        );
+    }
 
     .eyebrow {
       margin-bottom: 18px;
@@ -215,7 +201,7 @@
     }
 
     /* =========================
-       SECTIONS GÉNÉRALES
+       SECTIONS
     ========================= */
 
     section {
@@ -468,7 +454,7 @@
     }
 
     /* =========================
-       PIED DE PAGE
+       FOOTER
     ========================= */
 
     footer {
@@ -492,7 +478,7 @@
     }
 
     /* =========================
-       VERSION MOBILE
+       MOBILE
     ========================= */
 
     @media (max-width: 800px) {
@@ -607,11 +593,7 @@
         </nav>
 
         <div class="languages">
-          <a href="../">🇪🇸 Español</a>
-          &nbsp;|&nbsp;
-          Français
-          &nbsp;|&nbsp;
-          <a href="../en/">🇬🇧 English</a>
+          🇫🇷 Français &nbsp;|&nbsp; 🇬🇧 English
         </div>
 
       </div>
@@ -625,7 +607,7 @@
 
 
     <!-- =========================
-         PORTADA
+         HERO
     ========================= -->
 
     <section class="hero">
@@ -645,10 +627,10 @@
         </h2>
 
         <p class="hero-description">
-          Une invitation à explorer la littérature hispanique
-          contemporaine, à approfondir la lecture des œuvres littéraires
-          et à partager votre propre point de vue dans un espace convivial
-          consacré à la lecture et à la conversation en espagnol.
+          Une invitation à découvrir la littérature hispanique
+          contemporaine, à approfondir votre lecture des œuvres
+          littéraires et à partager votre propre regard dans un
+          espace chaleureux de lecture et d’échange en espagnol.
         </p>
 
         <div class="hero-buttons">
@@ -664,7 +646,7 @@
             href="#registration"
             class="button button-secondary"
           >
-            S'inscrire
+            S’inscrire
           </a>
 
         </div>
@@ -675,7 +657,7 @@
 
 
     <!-- =========================
-         LECTURES GUIDÉES
+         LECTURES
     ========================= -->
 
     <section class="readings" id="readings">
@@ -691,10 +673,10 @@
         </h2>
 
         <p class="section-intro">
-          Chaque séance propose une lecture guidée d'œuvres de littérature
-          hispanique contemporaine. Les séances associent la lecture
-          à voix haute d'extraits sélectionnés, l'analyse littéraire
-          et la conversation en espagnol.
+          Chaque séance propose une lecture guidée d’œuvres de la
+          littérature hispanique contemporaine. Les séances associent
+          la lecture à voix haute d’extraits sélectionnés, l’analyse
+          littéraire et la discussion en espagnol.
         </p>
 
         <div class="session-includes">
@@ -706,19 +688,19 @@
           <ul>
 
             <li>
-              Lecture des textes sélectionnés.
+              La lecture des textes sélectionnés.
             </li>
 
             <li>
-              Lecture à voix haute d'extraits sélectionnés.
+              La lecture à voix haute d’extraits sélectionnés.
             </li>
 
             <li>
-              Analyse littéraire.
+              Une analyse littéraire.
             </li>
 
             <li>
-              Conversation en espagnol.
+              Une discussion en espagnol.
             </li>
 
           </ul>
@@ -727,7 +709,7 @@
 
         <p class="section-intro final-note">
           Vous pouvez participer à une seule séance ou à plusieurs,
-          selon vos intérêts et vos disponibilités.
+          selon vos centres d’intérêt et vos disponibilités.
         </p>
 
       </div>
@@ -752,12 +734,10 @@
         </h2>
 
 
-        <!-- ŒUVRE À L'HONNEUR -->
-
         <div class="featured-work">
 
           <span class="featured-label">
-            Œuvre à l'honneur
+            Œuvre à l’honneur
           </span>
 
           <h3>
@@ -768,12 +748,8 @@
         </div>
 
 
-        <!-- LISTE DES SÉANCES -->
-
         <div class="schedule-list">
 
-
-          <!-- 16 SEPTEMBRE -->
 
           <div class="session">
 
@@ -796,8 +772,6 @@
           </div>
 
 
-          <!-- 23 SEPTEMBRE -->
-
           <div class="session">
 
             <div class="date">
@@ -818,8 +792,6 @@
 
           </div>
 
-
-          <!-- 30 SEPTEMBRE -->
 
           <div class="session">
 
@@ -842,8 +814,6 @@
           </div>
 
 
-          <!-- 7 OCTOBRE -->
-
           <div class="session">
 
             <div class="date">
@@ -864,8 +834,6 @@
 
           </div>
 
-
-          <!-- 14 OCTOBRE -->
 
           <div class="session">
 
@@ -888,8 +856,6 @@
           </div>
 
 
-          <!-- 21 OCTOBRE -->
-
           <div class="session">
 
             <div class="date">
@@ -910,8 +876,6 @@
 
           </div>
 
-
-          <!-- 28 OCTOBRE -->
 
           <div class="session">
 
@@ -943,7 +907,7 @@
 
         <p class="schedule-note">
           Des horaires supplémentaires pourront être proposés
-          selon les pays et les fuseaux horaires des participants.
+          en fonction des pays et des fuseaux horaires des participants.
         </p>
 
       </div>
@@ -968,7 +932,7 @@
             </div>
 
             <h2 class="about-heading">
-              À propos de moi
+              À propos
             </h2>
 
           </div>
@@ -976,19 +940,19 @@
           <div class="about-text">
 
             <p>
-              Je suis enseignante en littérature et en langues
-              et titulaire d'un Master en linguistique appliquée.
+              Je suis enseignant en littérature et en langues et
+              titulaire d’un Master en linguistique appliquée.
             </p>
 
             <p>
-              Je suis née en Argentine et j'ai enseigné en Nouvelle-Zélande,
+              Né en Argentine, j’ai enseigné en Nouvelle-Zélande,
               aux États-Unis, en Angleterre et maintenant en France.
             </p>
 
             <p>
               À travers Lecturas Hispánicas, je propose un espace
-              consacré à la lecture, à l'analyse littéraire et à la
-              conversation en espagnol, où les participants peuvent
+              consacré à la lecture, à l’analyse littéraire et à
+              la discussion en espagnol, où les participants peuvent
               découvrir la littérature hispanique contemporaine,
               approfondir leur compréhension des textes littéraires
               et partager leurs propres points de vue.
@@ -1020,15 +984,15 @@
         </h2>
 
         <p class="section-intro">
-          Vous pouvez participer à une séance ou à plusieurs,
-          selon vos intérêts et vos disponibilités.
+          Participez à une séance ou à plusieurs, selon vos centres
+          d’intérêt et vos disponibilités.
         </p>
 
 
         <div class="registration-box">
 
           <h3>
-            Prix par séance
+            Tarif par séance
           </h3>
 
           <div class="price">
@@ -1036,7 +1000,7 @@
           </div>
 
           <p>
-            Le paiement s'effectue via PayPal :
+            Le paiement s’effectue via PayPal :
           </p>
 
           <a
@@ -1049,14 +1013,14 @@
           <p class="registration-note">
             Une fois votre inscription confirmée, vous recevrez
             automatiquement par e-mail le lien Zoom correspondant
-            à la séance sélectionnée.
+            à la séance choisie.
           </p>
 
           <a
             href="mailto:alex.caloni@gmail.com?subject=Inscription%20Lecturas%20Hisp%C3%A1nicas"
             class="button button-primary"
           >
-            S'inscrire par e-mail
+            S’inscrire par e-mail
           </a>
 
         </div>
@@ -1083,7 +1047,7 @@
         </h2>
 
         <p>
-          Adresse e-mail :
+          E-mail :
         </p>
 
         <a
@@ -1101,7 +1065,7 @@
 
 
   <!-- =========================
-       PIED DE PAGE
+       FOOTER
   ========================= -->
 
   <footer>
@@ -1117,7 +1081,7 @@
       </p>
 
       <p>
-        En ligne sur Zoom • Basé en France • Ouvert aux participants du monde entier
+        En ligne via Zoom • Basé en France • Ouvert aux participants du monde entier
       </p>
 
       <p style="margin-top: 20px;">
