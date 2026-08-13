@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lecturas Hispánicas | Lecturas guiadas de literatura hispánica contemporánea</title>
+  <title>Lecturas Hispánicas | Guided Readings in Contemporary Hispanic Literature</title>
 
   <meta
     name="description"
-    content="Lecturas guiadas de literatura hispánica contemporánea, con análisis literario y conversación en español."
+    content="Guided readings in contemporary Hispanic literature, with literary analysis and discussion in Spanish."
   >
 
   <style>
@@ -53,7 +53,7 @@
     }
 
     /* =========================
-       ENCABEZADO
+       HEADER
     ========================= */
 
     header {
@@ -110,38 +110,24 @@
       white-space: nowrap;
     }
 
-    .languages a {
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .languages a:hover {
-      color: var(--accent);
-    }
-
     /* =========================
-       PORTADA
+       HERO
     ========================= */
 
-.hero {
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  background:
-    linear-gradient(
-      rgba(248, 244, 236, 0.78),
-      rgba(248, 244, 236, 0.90)
-    ),
-    url("images/WhatsApp Image 2026-08-12 at 19.23.01 (1).jpeg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    .hero {
+      padding: 115px 0 105px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(248, 244, 236, 0.88),
+          rgba(248, 244, 236, 0.97)
+        ),
+        radial-gradient(
+          circle at top,
+          #e9dcc7,
+          transparent 65%
+        );
+    }
 
     .eyebrow {
       margin-bottom: 18px;
@@ -215,7 +201,7 @@
     }
 
     /* =========================
-       SECCIONES GENERALES
+       GENERAL SECTIONS
     ========================= */
 
     section {
@@ -255,7 +241,7 @@
     }
 
     /* =========================
-       LECTURAS GUIADAS
+       GUIDED READINGS
     ========================= */
 
     .session-includes {
@@ -288,7 +274,7 @@
     }
 
     /* =========================
-       PROGRAMA
+       SCHEDULE
     ========================= */
 
     .schedule {
@@ -380,7 +366,7 @@
     }
 
     /* =========================
-       SOBRE EL PROYECTO
+       ABOUT
     ========================= */
 
     .about-grid {
@@ -403,7 +389,7 @@
     }
 
     /* =========================
-       INSCRIPCIÓN
+       REGISTRATION
     ========================= */
 
     .registration {
@@ -425,6 +411,8 @@
       font-size: 1.25rem;
       font-weight: normal;
     }
+
+    /* €10 MADE SMALLER */
 
     .price {
       margin: 8px 0 20px;
@@ -453,7 +441,7 @@
     }
 
     /* =========================
-       CONTACTO
+       CONTACT
     ========================= */
 
     .contact {
@@ -468,7 +456,7 @@
     }
 
     /* =========================
-       PIE DE PÁGINA
+       FOOTER
     ========================= */
 
     footer {
@@ -492,7 +480,7 @@
     }
 
     /* =========================
-       VERSIÓN MÓVIL
+       MOBILE
     ========================= */
 
     @media (max-width: 800px) {
@@ -571,7 +559,7 @@
 <body>
 
   <!-- =========================
-       ENCABEZADO
+       HEADER
   ========================= -->
 
   <header>
@@ -588,28 +576,26 @@
           <ul class="nav-links">
 
             <li>
-              <a href="#readings">Lecturas</a>
+              <a href="#readings">Readings</a>
             </li>
 
             <li>
-              <a href="#schedule">Programa</a>
+              <a href="#schedule">Schedule</a>
             </li>
 
             <li>
-              <a href="#about">Sobre mí</a>
+              <a href="#about">About</a>
             </li>
 
             <li>
-              <a href="#registration">Inscripción</a>
+              <a href="#registration">Registration</a>
             </li>
 
           </ul>
         </nav>
 
         <div class="languages">
-          <a href="./fr/">🇫🇷 Français</a>
-          &nbsp;|&nbsp;
-          <a href="./en/">🇬🇧 English</a>
+          🇫🇷 Français &nbsp;|&nbsp; 🇬🇧 English
         </div>
 
       </div>
@@ -621,9 +607,8 @@
 
   <main id="top">
 
-
     <!-- =========================
-         PORTADA
+         HERO
     ========================= -->
 
     <section class="hero">
@@ -631,7 +616,7 @@
       <div class="container">
 
         <div class="eyebrow">
-          Literatura hispánica contemporánea
+          Contemporary Hispanic Literature
         </div>
 
         <h1>
@@ -639,14 +624,13 @@
         </h1>
 
         <h2>
-          Lecturas guiadas de literatura hispánica contemporánea
+          Guided Readings in Contemporary Hispanic Literature
         </h2>
 
         <p class="hero-description">
-          Una invitación a explorar la literatura hispánica
-          contemporánea, profundizar en la lectura de obras literarias
-          y compartir tu propia perspectiva en un espacio acogedor
-          de lectura y conversación en español.
+          An invitation to explore contemporary Hispanic literature,
+          deepen your reading of literary works, and share your own
+          perspective in a welcoming Spanish-language environment.
         </p>
 
         <div class="hero-buttons">
@@ -655,14 +639,14 @@
             href="#schedule"
             class="button button-primary"
           >
-            Ver el programa
+            View Schedule
           </a>
 
           <a
             href="#registration"
             class="button button-secondary"
           >
-            Inscribirse
+            Register
           </a>
 
         </div>
@@ -673,7 +657,7 @@
 
 
     <!-- =========================
-         LECTURAS GUIADAS
+         GUIDED READINGS
     ========================= -->
 
     <section class="readings" id="readings">
@@ -681,42 +665,41 @@
       <div class="container">
 
         <div class="small-title">
-          Las sesiones
+          The Sessions
         </div>
 
         <h2 class="section-title">
-          Lecturas guiadas
+          Guided Readings
         </h2>
 
         <p class="section-intro">
-          Cada sesión ofrece una lectura guiada de obras de literatura
-          hispánica contemporánea. Las sesiones combinan la lectura
-          en voz alta de fragmentos seleccionados, el análisis literario
-          y la conversación en español.
+          Each session offers a guided reading of contemporary Hispanic
+          literary works. Sessions combine the reading aloud of selected
+          passages, literary analysis, and discussion in Spanish.
         </p>
 
         <div class="session-includes">
 
           <h3>
-            Cada sesión incluye:
+            Each session includes:
           </h3>
 
           <ul>
 
             <li>
-              Lectura de los textos seleccionados.
+              Reading of the selected texts.
             </li>
 
             <li>
-              Lectura en voz alta de fragmentos seleccionados.
+              Reading aloud of selected passages.
             </li>
 
             <li>
-              Análisis literario.
+              Literary analysis.
             </li>
 
             <li>
-              Conversación en español.
+              Discussion in Spanish.
             </li>
 
           </ul>
@@ -724,8 +707,8 @@
         </div>
 
         <p class="section-intro final-note">
-          Puedes participar en una sola sesión o en varias,
-          según tus intereses y disponibilidad.
+          The freedom to attend one session or several,
+          according to your interests and availability.
         </p>
 
       </div>
@@ -734,7 +717,7 @@
 
 
     <!-- =========================
-         PROGRAMA
+         SCHEDULE
     ========================= -->
 
     <section class="schedule" id="schedule">
@@ -742,17 +725,20 @@
       <div class="container">
 
         <div class="small-title">
-          Otoño 2026
+          Autumn 2026
         </div>
 
         <h2 class="section-title">
-          Programa
+          Schedule
         </h2>
+
+
+        <!-- FEATURED WORK -->
 
         <div class="featured-work">
 
           <span class="featured-label">
-            Obra destacada
+            Featured Work
           </span>
 
           <h3>
@@ -762,12 +748,16 @@
 
         </div>
 
+
+        <!-- SCHEDULE -->
+
         <div class="schedule-list">
+
 
           <div class="session">
 
             <div class="date">
-              16 de septiembre
+              16 September
             </div>
 
             <div class="works">
@@ -784,10 +774,11 @@
 
           </div>
 
+
           <div class="session">
 
             <div class="date">
-              23 de septiembre
+              23 September
             </div>
 
             <div class="works">
@@ -804,10 +795,11 @@
 
           </div>
 
+
           <div class="session">
 
             <div class="date">
-              30 de septiembre
+              30 September
             </div>
 
             <div class="works">
@@ -824,10 +816,13 @@
 
           </div>
 
+
+          <!-- CORRECTED 7 OCTOBER -->
+
           <div class="session">
 
             <div class="date">
-              7 de octubre
+              7 October
             </div>
 
             <div class="works">
@@ -844,10 +839,11 @@
 
           </div>
 
+
           <div class="session">
 
             <div class="date">
-              14 de octubre
+              14 October
             </div>
 
             <div class="works">
@@ -864,34 +860,32 @@
 
           </div>
 
+
           <div class="session">
 
             <div class="date">
-              21 de octubre
+              21 October
             </div>
 
             <div class="works">
 
               <div class="work">
-
                 Mal de manos
-
               </div>
 
               <div class="work">
-
                 El sillón de la señora Michalski
-
               </div>
 
             </div>
 
           </div>
 
+
           <div class="session">
 
             <div class="date">
-              28 de octubre
+              28 October
             </div>
 
             <div class="works">
@@ -910,14 +904,15 @@
 
         </div>
 
+
         <div class="schedule-time">
-          <strong>Horario:</strong>
-          19:00–20:30 (hora de Francia)
+          <strong>Time:</strong>
+          7:00–8:30 p.m. (France time)
         </div>
 
         <p class="schedule-note">
-          Se podrán ofrecer horarios adicionales según los países
-          y las zonas horarias de los participantes.
+          Additional session times may be offered depending on
+          participants' countries and time zones.
         </p>
 
       </div>
@@ -926,7 +921,7 @@
 
 
     <!-- =========================
-         SOBRE MÍ
+         ABOUT
     ========================= -->
 
     <section class="about" id="about">
@@ -938,11 +933,11 @@
           <div>
 
             <div class="small-title">
-              El proyecto
+              About the Project
             </div>
 
             <h2 class="about-heading">
-              Sobre mí
+              About
             </h2>
 
           </div>
@@ -950,22 +945,21 @@
           <div class="about-text">
 
             <p>
-              Soy docente de literatura y lenguas y tengo un
-              Máster en Lingüística Aplicada.
+              I am a lecturer in literature and languages and hold
+              a Master's degree in Applied Linguistics.
             </p>
 
             <p>
-              Nací en Argentina y he enseñado en Nueva Zelanda,
-              Estados Unidos, Inglaterra y ahora en Francia.
+              Born in Argentina, I have taught in New Zealand,
+              the United States, England and now France.
             </p>
 
             <p>
-              A través de Lecturas Hispánicas, ofrezco un espacio
-              para la lectura, el análisis literario y la conversación
-              en español, donde los participantes pueden descubrir
-              la literatura hispánica contemporánea, profundizar en
-              su comprensión de los textos literarios y compartir
-              sus propias perspectivas.
+              Through Lecturas Hispánicas, I offer a space for
+              reading, literary analysis and discussion in Spanish,
+              where participants can discover contemporary Hispanic
+              literature, deepen their understanding of literary
+              texts and share their own perspectives.
             </p>
 
           </div>
@@ -978,7 +972,7 @@
 
 
     <!-- =========================
-         INSCRIPCIÓN
+         REGISTRATION
     ========================= -->
 
     <section class="registration" id="registration">
@@ -986,30 +980,33 @@
       <div class="container">
 
         <div class="small-title">
-          Participa en una sesión
+          Join a Session
         </div>
 
         <h2 class="section-title">
-          Inscripción
+          Registration
         </h2>
 
         <p class="section-intro">
-          Puedes participar en una sesión o en varias,
-          según tus intereses y disponibilidad.
+          Join us for one session or several, according to your
+          interests and availability.
         </p>
+
 
         <div class="registration-box">
 
           <h3>
-            Precio por sesión
+            Fee per session
           </h3>
+
+          <!-- SMALLER €10 -->
 
           <div class="price">
             €10
           </div>
 
           <p>
-            El pago se realiza mediante PayPal:
+            Payment is made via PayPal:
           </p>
 
           <a
@@ -1020,16 +1017,16 @@
           </a>
 
           <p class="registration-note">
-            Una vez confirmada tu inscripción, recibirás
-            automáticamente por correo electrónico el enlace
-            de Zoom correspondiente a la sesión seleccionada.
+            Once your registration has been confirmed, you will
+            automatically receive the Zoom link for your selected
+            session by email.
           </p>
 
           <a
-            href="mailto:alex.caloni@gmail.com?subject=Inscripción%20Lecturas%20Hisp%C3%A1nicas"
+            href="mailto:alex.caloni@gmail.com?subject=Lecturas%20Hisp%C3%A1nicas%20Registration"
             class="button button-primary"
           >
-            Inscribirse por correo electrónico
+            Register by Email
           </a>
 
         </div>
@@ -1040,7 +1037,7 @@
 
 
     <!-- =========================
-         CONTACTO
+         CONTACT
     ========================= -->
 
     <section class="contact" id="contact">
@@ -1048,15 +1045,15 @@
       <div class="container">
 
         <div class="small-title">
-          Ponte en contacto
+          Get in Touch
         </div>
 
         <h2 class="section-title">
-          Contacto
+          Contact
         </h2>
 
         <p>
-          Correo electrónico:
+          Email:
         </p>
 
         <a
@@ -1074,7 +1071,7 @@
 
 
   <!-- =========================
-       PIE DE PÁGINA
+       FOOTER
   ========================= -->
 
   <footer>
@@ -1086,11 +1083,11 @@
       </h3>
 
       <p>
-        Lecturas guiadas de literatura hispánica contemporánea
+        Guided Readings in Contemporary Hispanic Literature
       </p>
 
       <p>
-        Online por Zoom • Con base en Francia • Abierto a participantes de todo el mundo
+        Online via Zoom • Based in France • Open to participants worldwide
       </p>
 
       <p style="margin-top: 20px;">
@@ -1102,4 +1099,4 @@
   </footer>
 
 </body>
-</html>
+  </html>
